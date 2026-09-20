@@ -1,11 +1,11 @@
-# Mediu virtual Python
+
 venv/
 .venv/
 
-# Cache Python și pytest
+
 __pycache__/
 *.pyc
 .pytest_cache/
 
-# Fișier de log generat la rulare locală (opțional)
+
 can_trace.csv

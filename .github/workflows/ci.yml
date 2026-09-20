@@ -26,7 +26,7 @@ jobs:
 
     - name: Run CAN Bus Simulation
       run: |
-        # Rulăm simularea în fundal timp de 5 secunde pentru a genera log-ul can_trace.csv
+        # Rulam simularea in fundal timp de 5 secunde pentru a genera log-ul can_trace.csv
         python can_network_sim.py &
         SIM_PID=$!
         sleep 5

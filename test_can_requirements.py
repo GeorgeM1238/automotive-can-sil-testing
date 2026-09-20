@@ -24,12 +24,12 @@ def run_automated_tests():
             speed = float(row['VehicleSpeed_kmh'])
             current_timestamp = datetime.strptime(timestamp_str, '%Y-%m-%d %H:%M:%S.%f')
 
-            # --- VALIDARE REQ-01: Overspeed Limit (100 km/h) ---
+            
             if speed > 100:
                 pass_req01 = False
                 speed_violations.append((row['Timestamp'], speed))
 
-            # --- VALIDARE REQ-02: Message Cycle Time (< 500 ms) ---
+            
             if previous_timestamp is not None:
                 delta_ms = (current_timestamp - previous_timestamp).total_seconds() * 1000
                 if delta_ms > 500:
@@ -38,19 +38,18 @@ def run_automated_tests():
 
             previous_timestamp = current_timestamp
 
-    # --- AFISARE REZULTATE TESTE (REPORTING) ---
     print("TEST RESULT: REQ-01 [Overspeed Monitor (>100 km/h)]")
     if pass_req01:
-        print("  🟢 PASSED: Toate vitezele au fost în limitele sigure.\n")
+        print("   PASSED: Toate vitezele au fost in limitele sigure.\n")
     else:
-        print(f"  🔴 FAILED: Au fost detectate {len(speed_violations)} depășiri de viteză!")
+        print(f"   FAILED: Au fost detectate {len(speed_violations)} depasiri de viteza!")
         print(f"     Exemplu: La timestamp-ul {speed_violations[0][0]}, viteza a fost {speed_violations[0][1]} km/h.\n")
 
     print("TEST RESULT: REQ-02 [Message Periodicity (<500 ms)]")
     if pass_req02:
-        print("  🟢 PASSED: Perioada mesajului 0x100 este stabilă.\n")
+        print("   PASSED: Perioada mesajului 0x100 este stabila.\n")
     else:
-        print(f"  🔴 FAILED: S-au detectat întârzieri pe magistrală!")
+        print(f"   FAILED: S-au detectat intarzieri pe magistrala!")
         print(f"     Exemplu: La {timing_violations[0][0]}, timpul a fost de {timing_violations[0][1]:.2f} ms.\n")
 
 if __name__ == '__main__':
