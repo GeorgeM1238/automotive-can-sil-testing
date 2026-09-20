@@ -1,0 +1,11 @@
+VERSION ""
+
+NS_ :
+
+BS_:
+
+BU_: EngineECU DashboardECU
+
+BO_ 256 EngineData: 8 EngineECU
+ SG_ EngineSpeed : 0|16@1+ (1,0) [0|8000] "RPM" DashboardECU
+ SG_ VehicleSpeed : 16|8@1+ (1,0) [0|250] "km/h" DashboardECU
