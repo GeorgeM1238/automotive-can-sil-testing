@@ -1,6 +1,6 @@
 # CAN Bus SIL Test Environment & Requirement Verification
 
-![Build Status](https://github.com/UTILIZATORUL_TAU/automotive-can-sil-testing/actions/workflows/ci.yml/badge.svg)
+![Build Status](https://github.com/GeorgeM1238/automotive-can-sil-testing/actions/workflows/ci.yml/badge.svg)
 
 Software-in-the-Loop (SIL) test framework for CAN communication and automated requirement verification. The project simulates EngineECU and DashboardECU traffic over a virtual CAN interface using DBC definitions, logs frame data to CSV, and executes automated pass/fail checks.
 
