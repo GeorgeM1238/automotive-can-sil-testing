@@ -9,3 +9,8 @@ __pycache__/
 
 
 can_trace.csv
+
+.ipynb_checkpoints/
+*.ipynb
+carteisan.txt
+"python can_simulation.py"
